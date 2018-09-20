@@ -6860,3 +6860,14 @@ Processing by PostsController#create as */*
   [1m[35m (2.1ms)[0m  commit transaction
 [active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
 Completed 201 Created in 106ms (Views: 100.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/posts" for 188.53.196.213 at 2018-09-20 15:03:55 +0000
+Cannot render console from 188.53.196.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FagHFS6vBYPC0bWMHDoiEi8A3A/pNSPyak5CfCOoEJ66JS2+R31H5b5DeNiv4A4fFg0vNe8fZ/l4hrkJypPvDg==", "post"=>{"title"=>"what", "description"=>"today not tomorrow"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "what"], ["description", "today not tomorrow"], ["created_at", "2018-09-20 15:03:55.417209"], ["updated_at", "2018-09-20 15:03:55.417209"]]
+  [1m[36m (70.9ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 76ms (Views: 1.1ms | ActiveRecord: 71.3ms)
